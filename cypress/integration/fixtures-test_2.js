@@ -5,7 +5,7 @@ describe('Validade webdriveruni homepage links', () => {
      
         cy.fixture("user").as("usuario")
 
-        cy.visit('http://www.webdriveruniversity.com')
+        cy.navigateTo_webdriverUni_Homepage()
         cy.get('#contact-us').scrollIntoView().invoke('removeAttr','target').click({force:true})
     });
    

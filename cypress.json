@@ -1,3 +1,16 @@
+
 {
-    "chromeWebSecurity": false
+    "baseUrl":"http://www.webdriveruniversity.com/",
+    "chromeWebSecurity": false,
+
+"env":{
+"webdriveruni_homepage":"http://www.webdriveruniversity.com/",
+"first_name":"Joe"
+},
+"projectId": "7ccnjc",
+"comando especifico":"npx cypress run --spec cypress/integration/contact-us.js --record --key c5712f21-44bb-4b6e-a41d-54de12e3be46"
+
+
 }
+
+

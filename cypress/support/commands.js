@@ -19,6 +19,11 @@
 //
 // -- This is a dual command --
 // Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
+Cypress.Commands.add("navigateTo_webdriverUni_Homepage",()=>{
+    cy.visit("/")
+})
+
+
 Cypress.Commands.add("selectProduct", productName=>{
     cy.get('.fixed_wrapper .prdocutname').each(($el, index, $list) => {
         if($el.text().includes(productName)){
@@ -26,6 +31,17 @@ Cypress.Commands.add("selectProduct", productName=>{
         }
        })
 })
+
+Cypress.Commands.add("addProductTobBasket", productName=>{
+    cy.get('.fixed_wrapper .prdocutname').each(($el, index, $list) => {
+        if($el.text()===productName){
+           cy.log($el.text())
+           cy.get('.productcart').eq(index).click()
+        }
+       })
+})
+
+
 Cypress.Commands.add("escreverJson", (firstName, lastName, email,comments)=>{
     cy.get('input[ placeholder="First Name" ]').type(firstName)
     cy.get('input[ placeholder="Last Name" ]').type(lastName)

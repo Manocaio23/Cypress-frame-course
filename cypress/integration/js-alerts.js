@@ -1,7 +1,7 @@
 /// <reference types="Cypress" />   
 describe('Handle js alerts', () => {
     it('Confirm js alert correct text', ()=>{ 
-       cy.visit('http://www.webdriveruniversity.com')
+       cy.visit('/')
        cy.get('#popup-alerts').invoke('removeAttr','target').click({force:true})
        cy.get('#button1').click()
 //sempre apos clicar e aparecer o alert
@@ -11,7 +11,7 @@ describe('Handle js alerts', () => {
         
     })
     it('Validate js confirm alert box works correcty when clickin ok', ()=>{ 
-        cy.visit('http://www.webdriveruniversity.com')
+        cy.visit('/')
         cy.get('#popup-alerts').invoke('removeAttr','target').click({force:true})
         cy.get('#button4').click()
  
@@ -23,7 +23,7 @@ describe('Handle js alerts', () => {
      })
 
      it('Validate js confirm alert box works correcty when clickin ok cancel', ()=>{ 
-        cy.visit('http://www.webdriveruniversity.com')
+        cy.visit('/')
         cy.get('#popup-alerts').invoke('removeAttr','target').click({force:true})
         cy.get('#button4').click()
         //quando for pra negar

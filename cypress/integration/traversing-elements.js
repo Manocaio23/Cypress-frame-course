@@ -2,7 +2,7 @@
 describe('Validade webdriveruni homepage links', () => {
 
     before(() => {
-        cy.visit('http://www.webdriveruniversity.com')
+        cy.visit('/')
         cy.get('#data-table').scrollIntoView().invoke('removeAttr','target').click({force:true})
     });
    

@@ -7,13 +7,13 @@ describe('Validade webdriveruni homepage links', () => {
             globalThis.data=data; // as duas podem funcionar ou nao 
         })
 
-        cy.visit('http://www.webdriveruniversity.com')
+        cy.visit('/')
         cy.get('#contact-us').scrollIntoView().invoke('removeAttr','target').click({force:true})
     });
    
     it('Preencher Formulario', ()=>{ 
       
-        cy.escreverJson(data.firstName,data.lastName,data.email,data.comments)  
+              cy.escreverJson(Cypress.env("first_name"),data.lastName,data.email,data.comments)  
      })
 
      it('Preencher formulario outra forma', ()=>{
