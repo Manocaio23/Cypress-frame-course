@@ -10,7 +10,6 @@
 "projectId": "7ccnjc",
 "comando especifico":"npx cypress run --spec cypress/integration/contact-us.js --record --key c5712f21-44bb-4b6e-a41d-54de12e3be46"
 
-
 }
 
 
